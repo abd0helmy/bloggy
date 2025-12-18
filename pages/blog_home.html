@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggy - Home</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div class="home-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <a href="blog_home.html" class="logo">
+<i class="fa-solid fa-bolt logo-icon"></i>
+
+                    <span class="logo-text">Bloggy</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <div class="nav-pills">
+                        <a href="blog_home.html" class="nav-pill active">Home</a>
+                        <a href="add_article.html" class="nav-pill">Add Article</a>
+                        <a href="profile.html" class="nav-pill">Profile</a>
+                    </div>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </button>
+                    <a href="login.html" class="btn btn-primary">Sign In</a>
+                    
+                    <!-- Burger Menu -->
+                    <button class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <a href="blog_home.html">Home</a>
+            <a href="add_article.html">Add Article</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Sign In</a>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="home-main">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-card">
+                    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=800');"></div>
+                    <div class="hero-content">
+                        <div class="hero-meta">
+                            <span class="hero-tag">Featured</span>
+                            <span class="hero-date">Oct 26, 2023</span>
+                        </div>
+                        <h1 class="hero-title">The Future of Web Assembly</h1>
+                        <p class="hero-excerpt">Exploring how WASM is radically changing browser performance benchmarks and what it means for the next generation of web applications.</p>
+                        <div class="hero-footer">
+                            <div class="hero-author">
+                                <div class="author-avatar" style="background-image: url('https://ui-avatars.com/api/?name=Elena%20Rodriguez&background=6366f1&color=fff&size=128');"></div>
+                                <div class="author-info">
+                                    <span class="author-name">Elena Rodriguez</span>
+                                    <span class="author-role">Senior Engineer</span>
+                                </div>
+                            </div>
+                            <a href="single_article.html" class="btn btn-outline hero-cta">
+                                Read Article
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                    <polyline points="12 5 19 12 12 19"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section Header -->
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>Latest Insights</h2>
+                    <p>Fresh perspectives on design and code</p>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Design</button>
+                    <button class="filter-btn">Development</button>
+                    <button class="filter-btn">Tutorials</button>
+                </div>
+            </div>
+            
+            <!-- Articles Grid -->
+            <div class="articles-grid">
+                <!-- Article 1 -->
+                <article class="article-card">
+                    <div class="article-image-wrapper">
+                        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600');"></div>
+                        <span class="article-category">Design</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Design Systems 101</h3>
+                        <p class="article-excerpt">Building consistent UIs at scale isn't just about components; it's about communication.</p>
+                    </div>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="article-author-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100');"></div>
+                            <div class="article-author-info">
+                                <span class="article-author-name">Sarah Jenkins</span>
+                                <span class="article-meta">Oct 24 • 5 min read</span>
+                            </div>
+                        </div>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="article-card">
+                    <div class="article-image-wrapper">
+                        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600');"></div>
+                        <span class="article-category">Dev</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">React vs Vue in 2024</h3>
+                        <p class="article-excerpt">A comprehensive framework comparison for modern frontend teams deciding their stack.</p>
+                    </div>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="article-author-avatar" style="background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100');"></div>
+                            <div class="article-author-info">
+                                <span class="article-author-name">Mike Ross</span>
+                                <span class="article-meta">Oct 22 • 8 min read</span>
+                            </div>
+                        </div>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="article-card">
+                    <div class="article-image-wrapper">
+                        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600');"></div>
+                        <span class="article-category">UX</span>
+                    </div>
+                    <div class="article-content">
+                        <h3 class="article-title">Mastering Dark Mode</h3>
+                        <p class="article-excerpt">Best practices for contrast and color selection when designing for low-light environments.</p>
+                    </div>
+                    <div class="article-footer">
+                        <div class="article-author">
+                            <div class="article-author-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100');"></div>
+                            <div class="article-author-info">
+                                <span class="article-author-name">Ali Connors</span>
+                                <span class="article-meta">Oct 20 • 6 min read</span>
+                            </div>
+                        </div>
+                        <button class="like-btn" onclick="toggleLike(this)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="btn btn-secondary">Load More Articles</button>
+            </div>
+        </main>
+        
+        <!-- Mobile FAB -->
+        <div class="mobile-fab">
+            <a href="add_article.html" class="fab-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="home-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                    <span>NeonBlog</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+                <p class="footer-copyright">© 2024 Bloggy. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>

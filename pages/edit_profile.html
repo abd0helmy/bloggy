@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Bloggy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/edit_profile.css">
+</head>
+<body>
+    <div class="edit-profile-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <a href="blog_home.html" class="logo">
+<i class="fa-solid fa-bolt logo-icon"></i>
+                    <span class="logo-text">Bloggy</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="blog_home.html" class="nav-link">Home</a>
+                    <a href="add_article.html" class="nav-link">Add Article</a>
+                    <a href="profile.html" class="nav-link active">Profile</a>
+                </nav>
+                
+                <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+                    <a href="profile.html" class="btn btn-secondary">Cancel</a>
+                    
+                    <!-- Burger Menu -->
+                    <button class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <a href="blog_home.html">Home</a>
+            <a href="add_article.html">Add Article</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Sign Out</a>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="edit-profile-main">
+            <div class="page-header">
+                <h1>Edit Profile</h1>
+            </div>
+            
+            <form id="edit-profile-form" class="edit-profile-form">
+                <!-- Avatar Upload -->
+                <div class="avatar-upload-section">
+                    <div class="avatar-upload">
+                        <div class="avatar-preview" style="background-image: url('../assets/helmy.jpeg');"></div>
+                        <div class="avatar-upload-overlay">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                        </div>
+                        <input type="file" accept="image/*" id="avatar-input">
+                    </div>
+                    <p class="avatar-hint">Click to upload a new photo</p>
+                </div>
+                
+                <!-- Full Name -->
+                <div class="input-group">
+                    <label for="profile-name">Full Name</label>
+                    <input type="text" id="profile-name" class="form-input" placeholder="Enter your full name" required>
+                </div>
+                
+                <!-- Role/Title -->
+                <div class="input-group">
+                    <label for="profile-role">Role / Title</label>
+                    <input type="text" id="profile-role" class="form-input" placeholder="e.g. Product Designer, Developer">
+                </div>
+                
+                <!-- Bio -->
+                <div class="input-group">
+                    <label for="profile-bio">Bio</label>
+                    <textarea id="profile-bio" class="form-input form-textarea" placeholder="Tell us about yourself..."></textarea>
+                </div>
+                
+                <!-- Info Box -->
+                <div class="info-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                    <p>Your profile information will be visible to other users. Make sure to add a photo and bio to make your profile stand out!</p>
+                </div>
+                
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <a href="profile.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>

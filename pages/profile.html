@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Bloggy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <div class="profile-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <a href="blog_home.html" class="logo">
+<i class="fa-solid fa-bolt logo-icon"></i>
+
+                    <span class="logo-text">Bloggy</span>
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="blog_home.html" class="nav-link">Home</a>
+                    <a href="add_article.html" class="nav-link">Add Article</a>
+                    <a href="profile.html" class="nav-link active">Profile</a>
+                </nav>
+                
+                <div class="header-actions" style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="btn btn-secondary" onclick="logout()">Sign Out</button>
+                    
+                    <!-- Burger Menu -->
+                    <button class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Mobile Menu -->
+        <nav class="mobile-menu">
+            <a href="blog_home.html">Home</a>
+            <a href="add_article.html">Add Article</a>
+            <a href="profile.html">Profile</a>
+            <a href="#" onclick="logout()">Sign Out</a>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="profile-main">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-avatar" style="background-image: url('../assets/helmy.jpeg');"></div>
+                <h1 class="profile-name">Abdo Helmy</h1>
+                <p class="profile-bio">No bio yet. Click Edit Profile to add one.</p>
+                
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <div class="profile-stat-value" id="articles-count">0</div>
+                        <div class="profile-stat-label">Articles</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-value">0</div>
+                        <div class="profile-stat-label">Followers</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="profile-stat-value">0</div>
+                        <div class="profile-stat-label">Following</div>
+                    </div>
+                </div>
+                
+                <div class="profile-actions">
+                    <a href="edit_profile.html" class="btn btn-primary">Edit Profile</a>
+                </div>
+            </div>
+            
+            <!-- Profile Tabs -->
+            <div class="profile-tabs">
+                <button class="profile-tab active">My Articles</button>
+                <button class="profile-tab">Saved</button>
+                <button class="profile-tab">Liked</button>
+            </div>
+            
+            <!-- Profile Articles -->
+            <div class="profile-articles" id="user-articles">
+                <!-- Articles will be loaded dynamically -->
+                <div class="empty-state" id="empty-articles">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                    <p>You haven't written any articles yet.</p>
+                    <a href="add_article.html" class="btn btn-primary" id="write-article">Write Your First Article</a>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="footer-copyright">© 2024 Bloggy. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>

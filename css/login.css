@@ -1,0 +1,297 @@
+/* ===========================
+   Login Page Styles
+   =========================== */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Effects */
+.login-bg {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.login-bg .blob-1 {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 400px;
+    height: 400px;
+    background: rgba(70, 236, 19, 0.05);
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+.login-bg .blob-2 {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    width: 400px;
+    height: 400px;
+    background: rgba(70, 236, 19, 0.1);
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+/* Login Header */
+.login-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-header .logo {
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.login-header .logo-icon {
+    font-size: 1.75rem;
+    color: var(--primary);
+}
+
+.login-header .logo-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.login-header .signup-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.login-header .signup-link:hover {
+    color: var(--primary);
+}
+
+/* Login Main Content */
+.login-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Login Card */
+.login-card {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(30, 39, 28, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-xl);
+}
+
+@media (min-width: 640px) {
+    .login-card {
+        padding: 3rem;
+    }
+}
+
+.login-card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-card-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.login-card-header p {
+    color: var(--text-secondary);
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 3rem;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-full);
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.social-btn:hover {
+    background-color: var(--card-dark);
+    border-color: var(--primary);
+}
+
+.social-btn img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--border-accent);
+}
+
+.divider span {
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Remember & Forgot */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.25rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.remember-me input[type="checkbox"] {
+    display: none;
+}
+
+.remember-me .checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--border-accent);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.remember-me input:checked + .checkbox {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.remember-me .checkbox svg {
+    width: 0.875rem;
+    height: 0.875rem;
+    color: #000;
+    opacity: 0;
+}
+
+.remember-me input:checked + .checkbox svg {
+    opacity: 1;
+}
+
+.remember-me span {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.forgot-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.forgot-link:hover {
+    opacity: 0.8;
+}
+
+/* Submit Button */
+.login-submit {
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: var(--primary);
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+}
+
+.login-submit:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.login-submit:active {
+    transform: scale(0.98);
+}
+
+/* Footer Link */
+.login-footer-link {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+}
+
+.login-footer-link span {
+    color: var(--text-secondary);
+}
+
+.login-footer-link a {
+    font-weight: 700;
+    color: var(--primary);
+    margin-left: 0.25rem;
+}
+
+.login-footer-link a:hover {
+    text-decoration: underline;
+}
+
+/* Page Footer */
+.login-page-footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}

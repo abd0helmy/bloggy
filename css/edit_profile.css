@@ -1,0 +1,149 @@
+/* ===========================
+   Edit Profile Page Styles
+   =========================== */
+
+.edit-profile-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-profile-main {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 1.75rem;
+}
+
+/* Edit Profile Form */
+.edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Avatar Upload */
+.avatar-upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-md);
+}
+
+.avatar-upload {
+    position: relative;
+    cursor: pointer;
+}
+
+.avatar-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--background-dark);
+    border: 4px solid var(--primary);
+}
+
+.avatar-upload-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.avatar-upload:hover .avatar-upload-overlay {
+    opacity: 1;
+}
+
+.avatar-upload-overlay svg {
+    color: #ffffff;
+}
+
+.avatar-upload input[type="file"] {
+    display: none;
+}
+
+.avatar-hint {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+/* Form Inputs */
+.form-input {
+    width: 100%;
+    height: 3.5rem;
+    padding: 0 1.25rem;
+    background-color: var(--surface-dark);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-md);
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-input::placeholder {
+    color: var(--text-muted);
+}
+
+.form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(70, 236, 19, 0.1);
+}
+
+.form-textarea {
+    min-height: 120px;
+    padding: 1rem 1.25rem;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.form-actions .btn {
+    flex: 1;
+}
+
+/* Info Box */
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(70, 236, 19, 0.1);
+    border: 1px solid rgba(70, 236, 19, 0.2);
+    border-radius: var(--radius-md);
+}
+
+.info-box svg {
+    flex-shrink: 0;
+    color: var(--primary);
+}
+
+.info-box p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
