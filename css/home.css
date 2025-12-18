@@ -469,19 +469,7 @@
     text-align: center;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
 
-.footer-logo svg {
-    color: var(--primary);
-}
-
-.footer-logo span {
-    font-weight: 700;
-}
 
 .footer-links {
     display: flex;
